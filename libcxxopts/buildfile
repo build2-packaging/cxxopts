@@ -1,0 +1,4 @@
+./: {*/ -build/} doc{README.md} legal{LICENSE} manifest
+
+# Don't install examples.
+examples/: install = false

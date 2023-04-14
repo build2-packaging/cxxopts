@@ -1,0 +1,3 @@
+import libs = libcxxopts%lib{cxxopts}
+
+exe{example}: cxx{*} $libs
