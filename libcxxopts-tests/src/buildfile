@@ -1,0 +1,5 @@
+import libs = catch2{catch2}
+import libs += libcxxopts%lib{cxxopts}
+
+./: exe{options_test}: cxx{main options} $libs
+./: exe{link_test}: cxx{link_a link_b} $libs
