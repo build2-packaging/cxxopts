@@ -1,0 +1,4 @@
+import libs = libcxxopts%lib{cxxopts}
+
+./: exe{options_test}: cxx{main options} hxx{catch} $libs
+./: exe{link_test}: cxx{link_a link_b} hxx{catch} $libs
