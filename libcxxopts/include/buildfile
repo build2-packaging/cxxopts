@@ -1,3 +1,12 @@
+intf_libs =
+intf_poptions =
+
+if $config.libcxxopts.use_unicode
+{
+    # use pkgconfig file like in upstream
+    import intf_libs += libicu%lib{icu-uc}
+    intf_poptions += CXXOPTS_USE_UNICODE
+}
 
 lib{cxxopts}: hxx{*}
 
@@ -7,7 +16,9 @@ src_inc = [dir_path] $src_root/include/
 lib{cxxopts}:
 {
   cxx.poptions = "-I$out_inc" "-I$src_inc"
-  cxx.export.poptions = "-I$out_inc" "-I$src_inc"
+  cxx.libs = $intf_libs
+  cxx.export.poptions = "-I$out_inc" "-I$src_inc" $intf_poptions
+  cxx.export.libs = $intf_libs
 }
 
 # For pre-releases use the complete version to make sure they cannot be used
