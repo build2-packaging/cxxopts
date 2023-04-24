@@ -1,8 +1,0 @@
-import libs = libcxxopts%lib{cxxopts}
-
-# note that these tests use a very old version of catch
-# enable unique_ptr explicitly, otherwise catch will use auto_ptr which is removed since c++17
-cxx.poptions += -DCATCH_CONFIG_CPP11_UNIQUE_PTR
-
-./: exe{options_test}: cxx{main options} hxx{catch} $libs
-./: exe{link_test}: cxx{link_a link_b} hxx{catch} $libs
