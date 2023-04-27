@@ -2,6 +2,3 @@
 
 # Don't install examples.
 examples/: install = false
-
-# Don't install tests.
-tests/: install = false
