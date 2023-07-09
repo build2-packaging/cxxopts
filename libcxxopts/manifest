@@ -1,16 +1,26 @@
 : 1
 name: libcxxopts
-version: 3.1.1+1
+version: 3.1.1+2
+type: lib,binless
+language: c++
 project: cxxopts
 summary: Lightweight C++ command line option parser
 license: MIT
+topics: option parser, positional arguments
+
 description-file: README.md
-topics: C++
+changes-file: CHANGELOG.md
 url: https://github.com/jarro2783/cxxopts
 src-url: https://github.com/jarro2783/cxxopts
 doc-url: https://github.com/jarro2783/cxxopts/wiki
+
+package-description-file: PACKAGE.README.md
 package-url: https://github.com/build2-packaging/cxxopts
 package-email: packaging@build2.org ; Mailing list.
 
-depends: * build2 >= 0.15.0
-depends: * bpkg >= 0.15.0
+depends: * build2 >= 0.16.0
+depends: * bpkg >= 0.16.0
+
+depends: libicuuc ? ($config.libcxxopts.use_unicode)
+
+unicode-build-config: config.libcxxopts.use_unicode=true
