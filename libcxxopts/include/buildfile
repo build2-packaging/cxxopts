@@ -18,6 +18,3 @@ lib{cxxopts}: hxx{cxxopts} $libs
 if $config.libcxxopts.use_unicode
   lib{cxxopts}: cxx.export.poptions += -DCXXOPTS_USE_UNICODE
 
-# Installation is correctly handled by default.
-#
-# hxx{cxxopts}@./: install = include/
