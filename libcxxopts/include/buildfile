@@ -1,11 +1,20 @@
+libs = # No default library dependencies.
 
-lib{cxxopts}: hxx{*}
+# Import ICU library for Unicode configuration.
+#
+if $config.libcxxopts.use_unicode
+  import libs += libicuuc%lib{icuuc}
 
-out_inc = [dir_path] $out_root/include/
-src_inc = [dir_path] $src_root/include/
-
-lib{cxxopts}:
+# Header-Only Library
+#
+lib{cxxopts}: hxx{cxxopts} $libs
 {
-  cxx.poptions = "-I$out_inc" "-I$src_inc"
-  cxx.export.poptions = "-I$out_inc" "-I$src_inc"
+  cxx.export.poptions = "-I$src_base"
+  cxx.export.libs = $libs
 }
+
+# Set macro for Unicode configuration in the header.
+#
+if $config.libcxxopts.use_unicode
+  lib{cxxopts}: cxx.export.poptions += -DCXXOPTS_USE_UNICODE
+

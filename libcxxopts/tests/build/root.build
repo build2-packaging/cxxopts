@@ -1,0 +1,27 @@
+# The tests use an old version of Catch.
+# Only compilable with older standard.
+#
+cxx.std = 14
+
+using cxx
+
+hxx{*}: extension = hpp
+ixx{*}: extension = ipp
+txx{*}: extension = tpp
+cxx{*}: extension = cpp
+
+# Headers are not importable by default.
+#
+hxx{*}: cxx.importable = false
+
+# Every exe{} in this subproject is by default a test.
+#
+exe{*}: test = true
+
+# The test target for cross-testing (running tests under Wine, etc).
+#
+test.target = $cxx.target
+
+# Import the 'cxxopts' library by default.
+#
+import cxxopts = libcxxopts%lib{cxxopts}

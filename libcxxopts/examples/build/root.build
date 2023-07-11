@@ -1,13 +1,21 @@
-cxx.std = latest
+# In the Unicode configuration,
+# the examples use an implicit conversion
+# from 'const char8_t[80]' to 'const std::string&'
+# which is invalid in the latest C++ standard.
+# Hence, the standard is restricted to C++14.
+#
+cxx.std = 14
 
 using cxx
 
 cxx{*}: extension = cpp
 
-# Assume headers are importable unless stated otherwise.
-hxx{*}: cxx.importable = true
+# Headers are not importable by default.
+#
+hxx{*}: cxx.importable = false
 
 # The test target for cross-testing (running tests under Wine, etc).
+#
 test.target = $cxx.target
 
 exe{*}: test = true
