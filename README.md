@@ -14,11 +14,11 @@
     <a href="https://github.com/build2-packaging/cxxopts">
         <img src="https://img.shields.io/website/https/github.com/build2-packaging/cxxopts.svg?down_message=offline&label=build2&style=for-the-badge&up_color=blue&up_message=online">
     </a>
-    <a href="https://cppget.org/cxxopts">
-        <img src="https://img.shields.io/website/https/cppget.org/cxxopts.svg?down_message=offline&label=cppget.org&style=for-the-badge&up_color=blue&up_message=online">
+    <a href="https://cppget.org/libcxxopts">
+        <img src="https://img.shields.io/website/https/cppget.org/libcxxopts.svg?down_message=offline&label=cppget.org&style=for-the-badge&up_color=blue&up_message=online">
     </a>
-    <a href="https://queue.cppget.org/cxxopts">
-        <img src="https://img.shields.io/website/https/queue.cppget.org/cxxopts.svg?down_message=empty&down_color=blue&label=queue.cppget.org&style=for-the-badge&up_color=orange&up_message=running">
+    <a href="https://queue.cppget.org/libcxxopts">
+        <img src="https://img.shields.io/website/https/queue.cppget.org/libcxxopts.svg?down_message=empty&down_color=blue&label=queue.cppget.org&style=for-the-badge&up_color=orange&up_message=running">
     </a>
 </p>
 
