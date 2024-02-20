@@ -1,37 +1,14 @@
-<h1 align="center">
-    build2 Package for cxxopts
-</h1>
+# build2 Package for cxxopts
 
-<p align="center">
-    This project builds and defines the build2 package for <a href="https://github.com/jarro2783/cxxopts">cxxopts</a>.
-    A lightweight C++ command line option parser.
-</p>
-
-<p align="center">
-    <a href="https://github.com/jarro2783/cxxopts">
-        <img src="https://img.shields.io/website/https/github.com/jarro2783/cxxopts.svg?down_message=offline&label=Official&style=for-the-badge&up_color=blue&up_message=online">
-    </a>
-    <a href="https://github.com/build2-packaging/cxxopts">
-        <img src="https://img.shields.io/website/https/github.com/build2-packaging/cxxopts.svg?down_message=offline&label=build2&style=for-the-badge&up_color=blue&up_message=online">
-    </a>
-    <a href="https://cppget.org/libcxxopts">
-        <img src="https://img.shields.io/website/https/cppget.org/libcxxopts.svg?down_message=offline&label=cppget.org&style=for-the-badge&up_color=blue&up_message=online">
-    </a>
-    <a href="https://queue.cppget.org/libcxxopts">
-        <img src="https://img.shields.io/website/https/queue.cppget.org/libcxxopts.svg?down_message=empty&down_color=blue&label=queue.cppget.org&style=for-the-badge&up_color=orange&up_message=running">
-    </a>
-</p>
-
-<!-- [![build2](https://github.com/build2-packaging/cxxopts/actions/workflows/build2.yml/badge.svg)](https://github.com/build2-packaging/cxxopts/actions/workflows/build2.yml) -->
-<p align="center">
-  <a href="https://github.com/build2-packaging/cxxopts/actions/workflows/build2.yml">
-      <img src="https://github.com/build2-packaging/cxxopts/actions/workflows/build2.yml/badge.svg">
-  </a>
-</p>
-
-This project builds and defines the build2 package for the [cxxopts](https://github.com/jarro2783/cxxopts) library.
-
+This project builds and defines the build2 package for [`cxxopts`](https://github.com/jarro2783/cxxopts), a lightweight C++ command line option parser.
 The packaging code is licensed under the MIT License, the upstream artifacts are licensed under the terms and conditions of cxxopts.
+
+[![Official](https://img.shields.io/website/https/github.com/jarro2783/cxxopts.svg?down_message=offline&label=Official&style=for-the-badge&up_color=blue&up_message=online)](https://github.com/jarro2783/cxxopts)
+[![build2](https://img.shields.io/website/https/github.com/build2-packaging/cxxopts.svg?down_message=offline&label=build2&style=for-the-badge&up_color=blue&up_message=online)](https://github.com/build2-packaging/cxxopts)
+[![cppget.org](https://img.shields.io/website/https/cppget.org/libcxxopts.svg?down_message=offline&label=cppget.org&style=for-the-badge&up_color=blue&up_message=online)](https://cppget.org/libcxxopts)
+[![queue.cppget.org](https://img.shields.io/website/https/queue.cppget.org/libcxxopts.svg?down_message=empty&down_color=blue&label=queue.cppget.org&style=for-the-badge&up_color=orange&up_message=running)](https://queue.cppget.org/libcxxopts)
+
+[![build2](https://github.com/build2-packaging/cxxopts/actions/workflows/build2.yml/badge.svg)](https://github.com/build2-packaging/cxxopts/actions/workflows/build2.yml)
 
 ## Usage
 
@@ -51,7 +28,7 @@ If this is not an option then, instead, add this Git repository itself as a prer
 Add the respective dependency in your project's `manifest` file to make the package available for import.
 
 ```
-depends: libcxxopts ^ 3.1.1
+depends: libcxxopts ^ 3.2.0
 ```
 
 Import the library in your `buildfile` by using the following line.
@@ -69,7 +46,7 @@ Unicode functionality in cxxopts is based on the ICU library.
 It will be added as interface dependency to the header-only library if this config variable is set to `true`.
 
 ## Issues
-Currently, there are no known issues.
+- The upstream code uses older versions of Catch2 and provides its source code in-place. We don't depend on the Catch2 package as this older version is not available on `cppget.org`.
 
 ## Contributing
 Thanks in advance for your help and contribution to keep this package up-to-date.

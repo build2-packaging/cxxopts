@@ -1,10 +1,10 @@
 : 1
 name: libcxxopts
-version: 3.1.1+2
+version: 3.2.0
 type: lib,binless
 language: c++
 project: cxxopts
-summary: Lightweight C++ command line option parser
+summary: C++ command line option parser
 license: MIT
 topics: option parser, positional arguments
 
