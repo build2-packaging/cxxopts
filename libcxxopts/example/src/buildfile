@@ -1,6 +1,10 @@
 import cxxopts = libcxxopts%lib{cxxopts}
 
-exe{example}: cxx{*} $cxxopts testscript
+exe{example}: cxx{*} $cxxopts
+
+# Smoke Test
+#
+exe{example}: file{out.txt}: test.stdout = true
 
 if ($cxx.id == 'msvc')
   cxx.poptions += /utf-8
