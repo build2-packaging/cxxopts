@@ -4,3 +4,10 @@ import catch2 = catch2%lib{catch2}
 exe{options}: {hxx cxx}{**} $cxxopts $catch2
 
 cxx.poptions =+ "-I$src_base"
+
+# Prevent warnings from MSVC about
+# using the standard C functions.
+# Tests use `strcpy` function.
+#
+if ($cxx.target.system == 'win32-msvc')
+  cxx.poptions += -D_CRT_SECURE_NO_WARNINGS
