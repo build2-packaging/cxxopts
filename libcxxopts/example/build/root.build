@@ -4,7 +4,7 @@
 # which is invalid in the latest C++ standard.
 # Hence, the standard is restricted to C++14.
 #
-cxx.std = latest
+cxx.std = 14
 
 using cxx
 
