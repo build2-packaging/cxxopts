@@ -1,7 +1,8 @@
-# The tests use an old version of Catch.
-# Only compilable with older standard.
+# Uncomment to suppress warnings coming from external libraries.
 #
-cxx.std = 14
+#cxx.internal.scope = current
+
+cxx.std = latest
 
 using cxx
 
@@ -21,7 +22,3 @@ exe{*}: test = true
 # The test target for cross-testing (running tests under Wine, etc).
 #
 test.target = $cxx.target
-
-# Import the 'cxxopts' library by default.
-#
-import cxxopts = libcxxopts%lib{cxxopts}

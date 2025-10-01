@@ -1,10 +1,10 @@
 : 1
-name: libcxxopts
+name: libcxxopts-tests
 version: 3.3.1-a.0.z
 type: lib,binless
 language: c++
 project: cxxopts
-summary: C++ command line option parser library
+summary: C++ command line option parser library, tests
 license: MIT
 topics: option parser, positional arguments
 
@@ -21,8 +21,4 @@ package-email: packaging@build2.org ; Mailing list.
 depends: * build2 >= 0.16.0
 depends: * bpkg >= 0.16.0
 
-depends: libicuuc ? ($config.libcxxopts.use_unicode)
-
-tests: libcxxopts-tests == $
-
-unicode-build-config: config.libcxxopts.use_unicode=true
+depends: catch2 ^2.13.9

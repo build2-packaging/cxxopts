@@ -1,0 +1,6 @@
+import cxxopts = libcxxopts%lib{cxxopts}
+import catch2 = catch2%lib{catch2}
+
+exe{options}: {hxx cxx}{**} $cxxopts $catch2
+
+cxx.poptions =+ "-I$src_base"
