@@ -16,5 +16,7 @@ lib{cxxopts}: hxx{cxxopts} $libs
 # Set macro for Unicode configuration in the header.
 #
 if $config.libcxxopts.use_unicode
+{
+  cxx.poptions += -DCXXOPTS_USE_UNICODE
   lib{cxxopts}: cxx.export.poptions += -DCXXOPTS_USE_UNICODE
-
+}
