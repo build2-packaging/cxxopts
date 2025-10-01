@@ -1,3 +1,6 @@
 import libs = libcxxopts%lib{cxxopts}
 
 exe{example}: cxx{*} $libs
+
+if ($cxx.id == 'msvc')
+  cxx.poptions += /utf-8
