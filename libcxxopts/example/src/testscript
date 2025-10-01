@@ -1,0 +1,13 @@
+$* --list >>EOO == 0
+list = true
+true = true (default)
+output = a.out (default)
+bob = false (default)
+compile = false (default)
+long-description = false (default)
+help = false (default)
+option_that_is_too_long_for_the_help = false (default)
+tab-expansion = false (default)
+range = false (default)
+
+EOO

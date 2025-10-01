@@ -1,0 +1,6 @@
+import cxxopts = libcxxopts%lib{cxxopts}
+
+exe{example}: cxx{*} $cxxopts testscript
+
+if ($cxx.id == 'msvc')
+  cxx.poptions += /utf-8

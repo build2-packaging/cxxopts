@@ -4,7 +4,7 @@
 # which is invalid in the latest C++ standard.
 # Hence, the standard is restricted to C++14.
 #
-cxx.std = 14
+cxx.std = latest
 
 using cxx
 
@@ -18,4 +18,6 @@ hxx{*}: cxx.importable = false
 #
 test.target = $cxx.target
 
+# Executables are tests by default.
+#
 exe{*}: test = true
