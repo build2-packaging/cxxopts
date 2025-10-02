@@ -1,6 +1,6 @@
 : 1
 name: libcxxopts-tests
-version: 3.3.1-a.0.z
+version: 3.3.1
 type: exe
 language: c++
 project: cxxopts
