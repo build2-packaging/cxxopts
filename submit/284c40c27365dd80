@@ -1,0 +1,8 @@
+: 1
+name: libcxxopts-tests
+version: 3.3.1
+type: exe
+language: c++
+project: cxxopts
+summary: C++ command line option parser library, tests
+license: MIT
